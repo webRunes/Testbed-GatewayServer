@@ -9,7 +9,7 @@
         <div class="text-center ">
             @Html.AntiForgeryToken()
             <!--<h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>-->
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>-->
             <div class="wrapper">
                 <button class="btn btn-danger btn-lg" type="button" id="Mote" value="off" onclick=PostOperation(this) data-loading-text="Loading ...">Turn Off Zolertia</button>
                 <button class="btn btn-success" id="Sensor" value="on" onclick=PostOperation(this)>Activate Temperature Sensor</button>
@@ -31,32 +31,32 @@
 
 
 
-        <!--<script src="~/js/signalr/dist/browser/signalr.js"></script>-->
-        <script src="~/js/signalr.js"></script>
-        <script src="~/js/Index.js"></script>
-        <script>
-            $(document).ready(function () {
+<!--<script src="~/js/signalr.js"></script>-->
+<script src="https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.2.js"></script>
+<script src="~/js/Index.js"></script>
+<script>
+    $(document).ready(function () {
 
-            });
-            function PostOperation(button) {                
-                button.innerHTML = '<span class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span> Loading...';
-                var operation = { dev: button.id, opr: button.value };
-                //operation.dev = button.id;
-                //operation.opr = button.val;
-                //alert("CheckBox ids are " + jsonselectedrows);
-                $.ajax({
-                    type: "POST",
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader("X-XSRF-Token",
-                            $('input:hidden[name="__RequestVerificationToken"]').val());
-                    },
-                    url: "/Index?handler=PostOperation",
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    data: JSON.stringify(operation),
-                    success: function (response) {
+    });
+    function PostOperation(button) {
+        button.innerHTML = '<span class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span> Loading...';
+        var operation = { dev: button.id, opr: button.value };
+        //operation.dev = button.id;
+        //operation.opr = button.val;
+        //alert("CheckBox ids are " + jsonselectedrows);
+        $.ajax({
+            type: "POST",
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("X-XSRF-Token",
+                    $('input:hidden[name="__RequestVerificationToken"]').val());
+            },
+            url: "/Index?handler=PostOperation",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify(operation),
+            success: function (response) {
 
-                    }
-                });
             }
-        </script>
+        });
+    }
+</script>
