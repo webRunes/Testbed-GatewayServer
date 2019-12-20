@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yas\\source\\repos\\WebRunsDemo\\Demo\\Demo.csproj": {}
+    "C:\\Users\\Yas\\source\\repos\\Testbed-GatewayServer\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yas\\source\\repos\\WebRunsDemo\\Demo\\Demo.csproj": {
+    "C:\\Users\\Yas\\source\\repos\\Testbed-GatewayServer\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yas\\source\\repos\\WebRunsDemo\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\Users\\Yas\\source\\repos\\Testbed-GatewayServer\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\Yas\\source\\repos\\WebRunsDemo\\Demo\\Demo.csproj",
+        "projectPath": "C:\\Users\\Yas\\source\\repos\\Testbed-GatewayServer\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\Yas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yas\\source\\repos\\WebRunsDemo\\Demo\\obj\\",
+        "outputPath": "C:\\Users\\Yas\\source\\repos\\Testbed-GatewayServer\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yas\\AppData\\Roaming\\NuGet\\NuGet.Config",
