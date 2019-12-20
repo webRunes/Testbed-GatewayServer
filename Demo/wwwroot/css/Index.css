@@ -1,0 +1,23 @@
+﻿/*.wrapper {
+    text-align: center;
+    top: 50%;
+}*/
+
+.button {          
+    padding: 25px 42px;
+    border-radius: 12px;
+}
+
+
+
+ul {    
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    li {
+    height: 30px;
+    background: #ccc;
+    border-bottom: black 1px solid;
+    }
+}
