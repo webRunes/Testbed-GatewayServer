@@ -25,7 +25,7 @@ namespace Demo.Servics
     public class MqttService : IMqttService
     {
         private string clientId = Guid.NewGuid().ToString();
-        private string mqttURI = "52.14.169.245";
+        private string mqttURI = "54.235.73.25";
         private string mqttUser = "";
         private string mqttPassword = "";
         private int mqttPort = 1883;
@@ -35,6 +35,7 @@ namespace Demo.Servics
 
         public MqttService(IHubContext<DevicesHub> hubContext)
         {
+#if true
             _hubContext = hubContext;
             var messageBuilder = new MqttClientOptionsBuilder().WithClientId(clientId)/*.WithCredentials(mqttUser, mqttPassword)*/.WithTcpServer(mqttURI, mqttPort).WithCleanSession();
 
@@ -53,8 +54,10 @@ namespace Demo.Servics
             client.StartAsync(managedOptions);
 
             client.UseConnectedHandler(ClientConnectedHandler);
-            client.UseDisconnectedHandler(ClientDisconnectedHandler);
+            //client.UseDisconnectedHandler(ClientDisconnectedHandler);
+            client.ConnectingFailedHandler = new ConnectingFailedHandlerDelegate(OnConnectingFailed);
             client.UseApplicationMessageReceivedHandler(ClientMessageReceivedHandler);            
+#endif
         }
 
         private async void ClientMessageReceivedHandler(MqttApplicationMessageReceivedEventArgs arg)
@@ -100,7 +103,10 @@ namespace Demo.Servics
         {
             Console.WriteLine("Disconnected from MQTT Brokers.");            
         }
-
+        private void OnConnectingFailed(ManagedProcessFailedEventArgs e)
+        {
+            Console.WriteLine("OnConnectingFailed from MQTT Brokers.");
+        }
         private void ClientConnectedHandler(MqttClientConnectedEventArgs arg)
         {
             Console.WriteLine("Connected successfully with MQTT Brokers.");
