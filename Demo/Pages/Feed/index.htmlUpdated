@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="webRunes">
+    <meta name="keywords" content="WRIO Internet OS">
+    <title>76489819-868e-426e-946d-f3bae1991a93</title>
+
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org/",
+        "@type": "Datafeed",
+        "@id": "76489819-868e-426e-946d-f3bae1991a93",
+        "dateCreated": "2019-07-11T:04:30:40",
+        "dateModified": "2019-07-11T:05:30:00",
+        "author": "WRIO Ltd.",
+        "provider": "https://imec.wr.io/#dashboard",
+        "dataFeedElement": [
+        {
+        "@type": "DataFeedItem",
+        "dateCreated": ["2019-11-21T:00:00:00","2019-11-21T:01:00:00","2019-11-21T:02:00:00","2019-11-21T:03:00:00","2019-11-21T:04:00:00","2019-11-21T:05:00:00","2019-11-21T:06:00:00","2019-11-21T:07:00:00","2019-11-21T:08:00:00","2019-11-21T:09:00:00","2019-11-21T:10:00:00","2019-11-21T:11:00:00","2019-11-21T:12:00:00","2019-11-21T:13:00:00","2019-11-21T:14:00:00","2019-11-21T:15:00:00","2019-11-21T:16:00:00","2019-11-21T:17:00:00","2019-11-21T:18:00:00","2019-11-21T:19:00:00","2019-11-21T:20:00:00","2019-11-21T:21:00:00","2019-11-21T:22:00:00","2019-11-21T:23:00:00"],
+        "item": {
+        "@type": "Dataset",
+        "variableMeasured": {
+        "@type": "PropertyValue",
+        "name": "battery",
+        "unitText": "percent",
+        "value": ["29.2","29.2","","29.2","","29.2","29.2","29.2","29.2","29.2","29.2","29.2","29.2","29.2","29.2","29.2","29.1","29.1","29.1","29.1","29.1","29.1","29.1","29.1"]
+        }
+        }
+        },
+        {
+        "@type": "DataFeedItem",
+        "dateCreated": ["2019-11-21T:00:00:00","2019-11-21T:01:00:00","2019-11-21T:02:00:00","2019-11-21T:03:00:00","2019-11-21T:04:00:00","2019-11-21T:05:00:00","2019-11-21T:06:00:00","2019-11-21T:07:00:00","2019-11-21T:08:00:00","2019-11-21T:09:00:00","2019-11-21T:10:00:00","2019-11-21T:11:00:00","2019-11-21T:12:00:00","2019-11-21T:13:00:00","2019-11-21T:14:00:00","2019-11-21T:15:00:00","2019-11-21T:16:00:00","2019-11-21T:17:00:00","2019-11-21T:18:00:00","2019-11-21T:19:00:00","2019-11-21T:20:00:00","2019-11-21T:21:00:00","2019-11-21T:22:00:00","2019-11-21T:23:00:00"],
+        "item": {
+        "@type": "Dataset",
+        "variableMeasured": {
+        "@type": "PropertyValue",
+        "name": "temperature",
+        "unitText": "celsius",
+        "value": ["29.2","28.0","","27.9","","27.5","27.1","26.5","26.6","26.9","27.4","27.6","28.0","28.2","28.4","28.5","28.5","28.0","27.9","27.7","27.5","27.5","27.4","27.3"]
+        }
+        }
+        },
+        {
+        "@type": "DataFeedItem",
+        "dateCreated": ["2019-11-21T:00:00:00","2019-11-21T:01:00:00","2019-11-21T:02:00:00","2019-11-21T:03:00:00","2019-11-21T:04:00:00","2019-11-21T:05:00:00","2019-11-21T:06:00:00","2019-11-21T:07:00:00","2019-11-21T:08:00:00","2019-11-21T:09:00:00","2019-11-21T:10:00:00","2019-11-21T:11:00:00","2019-11-21T:12:00:00","2019-11-21T:13:00:00","2019-11-21T:14:00:00","2019-11-21T:15:00:00","2019-11-21T:16:00:00","2019-11-21T:17:00:00","2019-11-21T:18:00:00","2019-11-21T:19:00:00","2019-11-21T:20:00:00","2019-11-21T:21:00:00","2019-11-21T:22:00:00","2019-11-21T:23:00:00"],
+        "item": {
+        "@type": "Dataset",
+        "variableMeasured": {
+        "@type": "PropertyValue",
+        "name": "state",
+        "value": ["Enabled","Enabled","Disabled","Enabled","Disabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled","Enabled"]
+        }
+        }
+        }
+        ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org/",
+        "@type": "Product",
+        "name": "Zolertia Re-Mote",
+        "image": "https://zolertia.io/wp-content/uploads/2017/06/Untitled-design-12.png",
+        "description": "Zolertia Re-Mote",
+        "productID": "76489819-868e-426e-946d-f3bae1991a93",
+        "brand": "Zolertia",
+        "manufacturer": "https://zolertia.io/",
+        "productionDate": "Unknown",
+        "purchaseDate": "Unknown",
+        "releaseDate": "Unknown",
+        "height": "57mm",
+        "width": "35mm",
+        "weight": "Unknown"
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org/",
+        "@type": "GeoCoordinates",
+        "latitude": "51.0489145",
+        "longitude": "3.7284844"
+        }
+    </script>
+
+</head>
+<body>
+    <script type="text/javascript" src="https://wrioos.com/start.js"></script>
+</body>
+</html>

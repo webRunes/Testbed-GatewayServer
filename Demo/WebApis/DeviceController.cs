@@ -44,7 +44,14 @@ namespace Demo.WebApis
         public async Task<JsonResult> PostAsync([FromBody]UserRequest operation)
         {
             if (operation.dev == "Mote")
+            {
                 await _mqttService.PublishAsync("/iot/zolertia/cmd", operation.opr);
+                if(operation.opr == "off")                
+                    StorageSingleton.Instance.DeviceData.IsEnabled = false;
+                else
+                    StorageSingleton.Instance.DeviceData.IsEnabled = true;
+
+            }
             else
             {
                 if (operation.opr == "on")

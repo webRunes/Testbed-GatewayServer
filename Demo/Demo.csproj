@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.3.110.10" />
+    <PackageReference Include="json-ld.net" Version="1.0.6" />
     <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
     <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="3.0.8" />

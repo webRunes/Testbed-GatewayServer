@@ -89,7 +89,14 @@ namespace Demo.Servics
                     }
                     else if (topic == "/iot/zolertia/data")
                     {
-                        StorageSingleton.Instance.DeviceData = JsonConvert.DeserializeObject<DeviceData>(payload);
+                        if(payload == "{serialerror}\0")
+                        {
+
+                        }
+                        else
+                        {
+                            StorageSingleton.Instance.DeviceData = JsonConvert.DeserializeObject<DeviceData>(payload);
+                        }                        
                     }
                 }
             }

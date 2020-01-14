@@ -31,6 +31,9 @@ namespace Demo
 
             services.AddRazorPages();
             services.AddSingleton<IMqttService, MqttService>();
+
+            services.AddSingleton<IUpdateJsonLDFile, UpdateJsonLDFile>();
+
             services.AddAntiforgery(x => x.HeaderName = "X-XSRF-TOKEN");
             services.AddSignalR();
 
@@ -89,6 +92,9 @@ namespace Demo
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());*/
+
+
+            app.ApplicationServices.GetService<IUpdateJsonLDFile>();
         }
     }
 }

@@ -20,12 +20,12 @@ namespace Demo
 
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
-            //var port = Environment.GetEnvironmentVariable("PORT");            
+            var port = Environment.GetEnvironmentVariable("PORT");            
             return Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                    //.UseUrls("http://*:" + port);
+                    webBuilder.UseStartup<Startup>()
+                    .UseUrls("http://*:" + port);
                 });
         }
     }

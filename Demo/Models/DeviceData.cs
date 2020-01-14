@@ -10,5 +10,7 @@ namespace Demo.Models
         public string Name { get; set; }
         public string Model { get; set; }
         public string Temperature { get; set; }
+        public string BatteryVal { get; set; }
+        public bool IsEnabled { get; set; } = true;
     }
 }
