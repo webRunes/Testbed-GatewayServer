@@ -11,7 +11,7 @@ Thrid Party libs used:
 
 AppSetting of GatewayServer:
 
-AppSetting of GatewayServer could be found in AppSetting.json, For Example AppSettings for AWS looks alike this:
+AppSetting of GatewayServer could be found in AppSetting.json to be configured, For Example AppSettings for AWS looks alike this:
 
   "AWS": {
     "S3": {
