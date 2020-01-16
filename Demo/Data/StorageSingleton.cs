@@ -32,5 +32,6 @@ namespace Demo.Data
         // Note that this will be null when the instance if not set to
         // something in the constructor.
         public DeviceData DeviceData { get; set; }
+        public AppSettings AppSettings { get; set; } = new AppSettings();
     }
 }

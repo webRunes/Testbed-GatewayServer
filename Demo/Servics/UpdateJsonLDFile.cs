@@ -115,7 +115,7 @@ namespace Demo.Servics
                         //var str = jstr.ElementAt(7).ElementAt(0).ElementAt(2).ElementAt(1).ElementAt(0);
 
 
-                        string jsonldstr = JsonLD.Util.JSONUtils.ToString(jstr);
+                        string jsonldstr = JsonLD.Util.JSONUtils.ToPrettyString(jstr);
 
                         string htmlStr = jsonldstrmatched.beforeStringMatched + jsonldstr + jsonldstrmatched.afterStringMatched;
 

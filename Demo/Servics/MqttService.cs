@@ -24,12 +24,12 @@ namespace Demo.Servics
     }
     public class MqttService : IMqttService
     {
-        private string clientId = Guid.NewGuid().ToString();
-        private string mqttURI = "54.235.73.25";
-        private string mqttUser = "";
-        private string mqttPassword = "";
-        private int mqttPort = 1883;
-        private bool mqttSecure = false;
+        private string clientId = StorageSingleton.Instance.AppSettings.MQTT_ClientID == "RandomUID" ? Guid.NewGuid().ToString() : StorageSingleton.Instance.AppSettings.MQTT_ClientID;
+        private string mqttURI = StorageSingleton.Instance.AppSettings.MQTT_URL;//"54.235.73.25";
+        private string mqttUser = StorageSingleton.Instance.AppSettings.MQTT_UserName;//"";
+        private string mqttPassword = StorageSingleton.Instance.AppSettings.MQTT_Pass;//"";
+        private int mqttPort = Convert.ToInt32(StorageSingleton.Instance.AppSettings.MQTT_Port);//1883;
+        private bool mqttSecure = StorageSingleton.Instance.AppSettings.MQTT_Secure;//false;
         private IManagedMqttClient client;
         private readonly IHubContext<DevicesHub> _hubContext;
 

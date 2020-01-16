@@ -2,6 +2,7 @@
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.S3.Transfer;
+using Demo.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,11 +13,11 @@ namespace Demo.Servics
 {
     public class AmazonService
     {
-        private const string bucketName = "wr.io";
-        private const string keyName = "iot/index.html";
-        private const string filePath = @"C:\Users\Yas\source\repos\Testbed-GatewayServer\Demo\Pages\Feed\index.html";
-        private const string secretsKey = "AKIAYFDMLEIUXFWTIIEP";
-        private const string secretsSecret = "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";
+        private static string bucketName = StorageSingleton.Instance.AppSettings.AWS_S3_DataStore_Bucket;//"wr.io";
+        private static string keyName = StorageSingleton.Instance.AppSettings.AWS_S3_DataStore_FolderPath + "/" + "index.html";//"iot/index.html";
+        //private const string filePath = @"C:\Users\Yas\source\repos\Testbed-GatewayServer\Demo\Pages\Feed\index.html";
+        private static string secretsKey = StorageSingleton.Instance.AppSettings.AWS_S3_SecretsKey;//"AKIAYFDMLEIUXFWTIIEP";
+        private static string secretsSecret = StorageSingleton.Instance.AppSettings.AWS_S3_SecretsSecret;//"vTQvDSqqMeJzJGcpJw7KJhKWTrd1GzsstMjLmxLf";
         // Specify your bucket region (an example region is shown).
         private static readonly RegionEndpoint bucketRegion = RegionEndpoint.USEast1;
         private static IAmazonS3 s3Client = new AmazonS3Client(secretsKey, secretsSecret, RegionEndpoint.USEast1);
@@ -40,8 +41,10 @@ namespace Demo.Servics
                 using (var fileToUpload =
                     new FileStream(GetSensorFileLocalPath(), FileMode.Open, FileAccess.Read))
                 {
+                    /*fileTransferUtility.Upload(fileToUpload,
+                                               bucketName, keyName);*/
                     fileTransferUtility.Upload(fileToUpload,
-                                               bucketName, keyName);
+                                               bucketName, keyName);                    
                 }
                 Console.WriteLine("Upload completed");
 
