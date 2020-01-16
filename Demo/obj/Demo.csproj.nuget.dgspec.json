@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.110.10, )"
+            },
             "MQTTnet.Extensions.ManagedClient": {
               "target": "Package",
               "version": "[3.0.8, )"
@@ -49,6 +53,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.9.5, )"
+            },
+            "json-ld.net": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             }
           },
           "imports": [

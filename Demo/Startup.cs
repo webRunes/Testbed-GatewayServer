@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Demo.Hubs;
 using Demo.Servics;
+using Demo.Data;
 
 namespace Demo
 {
@@ -26,11 +27,16 @@ namespace Demo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            StorageSingleton.Instance.AppSettings.SetAppSettings(Configuration);        // always put start of app for get configuraton from appsettings.json
+
             services.AddControllers();
 
 
             services.AddRazorPages();
             services.AddSingleton<IMqttService, MqttService>();
+
+            services.AddSingleton<IUpdateJsonLDFile, UpdateJsonLDFile>();
+
             services.AddAntiforgery(x => x.HeaderName = "X-XSRF-TOKEN");
             services.AddSignalR();
 
@@ -89,6 +95,8 @@ namespace Demo
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());*/
+            
+            app.ApplicationServices.GetService<IUpdateJsonLDFile>();                        
         }
     }
 }
